@@ -1,0 +1,29 @@
+// A simple Unit Test implemented using JUnit 4.8.1
+
+public class MyUnit{
+	public String concatenate(String s1, String s2){
+		return s1 + s2;
+	}
+}
+
+// MyUnit is a simple class with only method concatenate which 
+// takes two input strings and return the concatenated string. 
+
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class MyUnitTest{
+	@Test
+	public void testConcatenate(){
+		MyUnit myUnit = new MyUnit();
+		String result = myUnit.concatenate("Hi" , "Hello");
+
+		// if the values are equal nothing happens. If the two values
+		// are not equal, an exception is thrown, and the test stops here
+		assertEquals("HiHello", result);
+	}
+} 
+
+// We have other Assert Methods like- assertArrayEquals(), assertTrue(), assertFalse(), 
+// assertNull(), assertNotNull() etc.
